@@ -30,6 +30,7 @@ en:
     admin_suggest: "Show Suggest"
     post_ago: "Post"
     ago_ago: "ago"
+    categories: "Categories"
   home:
     welcome: "Welcome to the Food & Drink"
     sign: "Sign up now!"
@@ -47,6 +48,12 @@ en:
     success: "Thanks for your help"
     fail: "Can't send your suggest"
     send_suggest: "Send suggest"
+  category:
+    nil: "Can't find this category"
+    success: "Create success"
+    fail: "Can't create new category"
+    create: "Create new category"
+    destroy: "category deleted"
   button:
     delete: "Delete"
     confirmation: "Confirmation"

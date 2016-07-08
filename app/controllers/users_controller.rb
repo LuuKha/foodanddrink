@@ -10,6 +10,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    @products = Product.paginate page: params[:page] 
+  end
+
   def edit
   end
 
