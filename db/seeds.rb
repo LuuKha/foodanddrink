@@ -26,3 +26,22 @@ User.create name: "user",
     is_admin: false
 end
 Category.create name: "Lemon"
+
+Product.create name: "name",
+  content: "content"
+  20.times do |n|
+  name = "Product #{n+1}"
+  content = "Content for #{n+1}: Join my online book signing where I would like
+    to dedicate these limited first editions to a lucky few. "
+  Product.create name: name,
+    content: content,
+    price: 15000,
+    category_id: 1,
+    quantity: 1
+  end
+20.times do |n|
+  content = Faker::Lorem.sentence(5)
+  Comment.create content: content,
+  user_id: n+1,
+  product_id: n+1
+end

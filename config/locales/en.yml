@@ -83,3 +83,11 @@ en:
   classify:
     drink: "Drink"
     food: "Food"
+  comment:
+    suggest: "Write a comment.."
+    label: "Make a comment"
+    save: "Product's comment was successfully submitted!"
+    unsave: "Fail to submit comment!"
+    commentby: "comment by "
+    by: "by"
+    at: "at"
