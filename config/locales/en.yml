@@ -68,6 +68,11 @@ en:
     create_button: "Create new product"
     new_product: "New Product"
     nil: "Product Not Found"
+    edit_product: "Edit Product"
+    update_product: "Update Product"
+    destroy: "Product has been deleted."
+    delete: "Delete."
+    confirm: "This action can not undo."
   classify:
     drink: "Drink"
     food: "Food"

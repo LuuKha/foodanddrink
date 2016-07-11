@@ -15,7 +15,8 @@
       <%= f.select :category_id, @category_selects %>
       <%= f.label :quantity %>
       <%= f.number_field :quantity %>
-      <%= f.submit t("product.create_button"), class: "btn btn-primary" %>
+      <%= f.submit @product.new_record? ? t("product.create_button") :
+        t("product.update_product"), class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

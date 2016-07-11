@@ -11,16 +11,19 @@
     <div class="product_info">
       <div class="produdct_name">
         <p><%= @product.name %></p>
-      </div>
+      </di>
       <p>
-        <strong><%= t "product.product_price" %></strong>:<%= @product.price%>
+        <strong><%= t "product.product_price" %></strong>:
+          <%= @product.price %>
       </p>
       <p>
         <strong><%= t "product.product_classify" %></strong>:
           <%= t "classify.#{@product.classify}" %>
       </p>
-      <p><strong><%= t "product.product_category" %>: </strong>:
-          <%= @product.category.name %></p>
+      <p>
+        <strong><%= t "product.product_category" %>: </strong>
+          <%= @product.category.name %>
+      </p>
       <p>
         <strong><%= t "product.product.product_content" %></strong>:
           <%= @product.content %>
@@ -28,4 +31,7 @@
       </div>
     </div>
   </div>
+  <%= link_to t("product.edit_product"), edit_admin_product_path(@product) %>
+    <%= link_to t("product.delete"), admin_product_path(@product), method:
+    :delete, data: {confirm: t("product.confirm")} %>
 </div>
