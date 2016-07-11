@@ -66,6 +66,8 @@ en:
     update_notice: "Product has been updated."
     update_alert: "Product has not been updated."
     create_button: "Create new product"
+    new_product: "New Product"
+    nil: "Product Not Found"
   classify:
     drink: "Drink"
     food: "Food"

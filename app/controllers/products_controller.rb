@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find_by_id params[:id]
     if @product.nil?
-      flash[:alert] = t "product.nil"
+      flash[:danger] = t "product.nil"
       redirect_to root_url
     end
   end

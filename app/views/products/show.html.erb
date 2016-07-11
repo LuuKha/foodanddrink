@@ -1,2 +1,24 @@
-<%= @product.name %>
-<%= image_tag @product.picture_link.url %>
+<%= provide :title, @product.name %>
+<div class="row">
+  <div>
+    <div class="product_image">
+      <p><%= image_tag @product.picture_link.url if @product.picture_link?
+        %></p>
+    </div>
+  </div>
+  <div>
+    <div class="product_info">
+      <div class="produdct_name">
+        <p><%= @product.name %></p>
+      </di>
+      <p><strong><%= t "product.product_price" %>: </strong>: <%= @product.price
+        %></p>
+      <p><strong><%= t "product.product_classify" %></strong>: <%=
+        t "classify.#{@product.classify}" %></p>
+      <p><strong><%= t "product.product_category" %>: </strong><%=
+        @product.category.name %></p>
+      <p><strong><%= t "product.product.product_content" %></strong>: <%=
+        @product.content %></p>
+    </div>
+  </div>
+</div>

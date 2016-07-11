@@ -9,6 +9,8 @@
           <% if current_user.is_admin? %>
             <li><%= link_to t("application.users"), admin_users_path %></li>
             <li><%= link_to t("application.admin_suggest"), admin_suggest_path(current_user) %></li>
+            <li><%= link_to t("product.product.new_product"),
+              new_admin_product_path %>
           <% else %>
             <li><%= link_to t("application.user_suggest"), new_suggest_path %></li>
           <% end %>
@@ -27,6 +29,6 @@
           <li><%= link_to t("application.login"), login_path %></li>
         <% end %>
       </ul>
-    </nav>  
+    </nav>
   </div>
 </header>
