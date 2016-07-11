@@ -8,10 +8,11 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :update, :edit]
   resources :suggests, only: [:create, :new]
   resources :products, only: [:index, :show]
-
+  
   namespace :admin do
     resources :users, only: [:index, :create, :destroy]
     resources :products, except: [:index]
     resources :suggests, only: [:show]
+    resources :categories, only: [:destroy, :create, :index]
   end
 end

@@ -11,6 +11,7 @@
             <li><%= link_to t("application.admin_suggest"), admin_suggest_path(current_user) %></li>
             <li><%= link_to t("product.product.new_product"),
               new_admin_product_path %>
+            <li><%= link_to t("application.admin_categories"), admin_categories_path %></li>
           <% else %>
             <li><%= link_to t("application.user_suggest"), new_suggest_path %></li>
           <% end %>

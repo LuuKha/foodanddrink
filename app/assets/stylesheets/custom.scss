@@ -164,3 +164,16 @@ input {
     margin-top: 5px;
   }
 }
+/* category */
+.categories {
+  li {
+    margin-top: 1em;
+  }
+  .category-li {
+    width: 80%;
+    float: left;
+  }
+  .category-delete {
+    height: 40px;
+  }
+}
