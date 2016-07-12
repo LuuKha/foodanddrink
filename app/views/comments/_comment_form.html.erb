@@ -1,0 +1,13 @@
+<%= form_for [@product, @comment] do |f| %>
+  <div class="row comment-form">
+    <div class= "panel panel-default">
+      <div class="panel-heading">
+        <b><%= t "comment.label" %></b>
+      </div>
+      <div class="panel-body">
+        <%= f.text_field :content, rows: 1, class: "form form-group form-control", 
+          placeholder: t("comment.suggest") %>
+      </div>      
+    </div>
+  </div>
+<% end %>
