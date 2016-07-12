@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   before_action :logged_in_user
 
   def index
-    @products = Product.all
+    @products = Product.paginate page: params[:page]
   end
 
   def show

@@ -3,7 +3,8 @@
   <div class="col-md-4">
     <div class="product_image">
       <p>
-        <%= image_tag @product.picture_link.url if @product.picture_link? %>
+        <%= image_tag @product.picture_link? ? @product.picture_link.url : 
+          "default-product.jpg", class: "mc-img" %>
       </p>
     </div>
   </div>
@@ -14,24 +15,24 @@
       </di>
       <p>
         <strong><%= t "product.product_price" %></strong>:
-          <%= @product.price %>
+        <%= @product.price %>
       </p>
       <p>
         <strong><%= t "product.product_classify" %></strong>:
-          <%= t "classify.#{@product.classify}" %>
+        <%= t "classify.#{@product.classify}" %>
       </p>
       <p>
         <strong><%= t "product.product_category" %>: </strong>
-          <%= @product.category.name %>
+        <%= @product.category.name %>
       </p>
       <p>
         <strong><%= t "product.product.product_content" %></strong>:
-          <%= @product.content %>
+        <%= @product.content %>
       </p>
       </div>
     </div>
   </div>
   <%= link_to t("product.edit_product"), edit_admin_product_path(@product) %>
-    <%= link_to t("product.delete"), admin_product_path(@product), method:
+  <%= link_to t("product.delete"), admin_product_path(@product), method:
     :delete, data: {confirm: t("product.confirm")} %>
 </div>

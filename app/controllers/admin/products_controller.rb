@@ -1,7 +1,6 @@
 class Admin::ProductsController < ApplicationController
-  before_action :logged_in_user
-  before_action :admin_user
-  before_action :find_product, except: [:new, :create]
+  before_action :logged_in_user, :admin_user
+  before_action :find_product, except: [:new, :create, :index]
   before_action :load_products, only: [:new, :edit]
 
   def new
@@ -12,7 +11,7 @@ class Admin::ProductsController < ApplicationController
     @product = Product.new product_params
     if @product.save
       flash.now[:notice] = t "product.create_notice"
-      redirect_to @product
+      redirect_to admin_product_path @product
     else
       load_products
       flash.now[:danger] = t "product.create_alert"
@@ -42,6 +41,10 @@ class Admin::ProductsController < ApplicationController
       flash[:success] = t "product.destroy"
       redirect_to root_url
     end
+  end
+
+  def index
+    @products = Product.paginate page: params[:page]
   end
 
   private
