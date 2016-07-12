@@ -1,0 +1,9 @@
+<% provide :title, t("product.products") %>
+<h1><%= t "product.products" %></h1>
+<div class="list_products">
+  <%= will_paginate %>
+  <div class="products">
+    <%= render @products %>
+  </div>
+  <%= will_paginate %>
+</div>
