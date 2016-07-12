@@ -17,6 +17,20 @@ class CommentsController < ApplicationController
     redirect_to :back
   end
 
+  def destroy
+    @comment = current_user.comments.find_by_id params[:id]
+    if @comment.nil?
+      flash[:danger]= t "comment.nil"
+      redirect_to :back
+    end
+    if @comment.destroy
+      flash[:success] = t "comment.deleted"
+    else
+      flash[:danger] = t "comment.cannotdelete"
+    end
+    redirect_to :back
+  end
+
   private
   def comment_params
     params.require(:comment).permit :content
