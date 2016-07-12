@@ -28,17 +28,27 @@
       </div>
     </div>
   </div>
-  
   <div class="product_comment">
     <%= render "comments/comment_form" %>
     <% if @comments.any? %>
       <div class="panel panel-default">
         <% @comments.each do |comment| %>
           <div class="panel-heading">
-            <small><%= t "comment.commentby" %></small>
-            <b><%= comment.user.name %></b>
-            <small><%= t "comment.at" %></small>
-            <b><%= comment.created_at %></b>
+            <div class="row">
+              <div class="col-xs-12 col-md-8">
+                <small><%= t "comment.commentby" %></small>
+                <b><%= comment.user.name %></b>
+                <small><%= t "comment.at" %></small>
+                <b><%= comment.created_at %></b>             
+              </div>
+              <div class="col-xs-6 col-md-4">
+                <% if comment.user == current_user %>
+                  <%= link_to t("button.delete"), product_comment_path(id: comment.id,
+                     product_id: comment.product_id), data: {confirm: (t "confirm.sure")}, 
+                     method: :delete, class: "btn btn-sm btn-danger button" %>
+                <% end %>
+              </div>
+            </div>
           </div>
           <div class="panel-body">
             <%= comment.content %>

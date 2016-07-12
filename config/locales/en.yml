@@ -91,3 +91,7 @@ en:
     commentby: "comment by "
     by: "by"
     at: "at"
+    nil: "Comment is not found"
+    deleted: "Comment deleted"
+    updated: "Comment updated"
+    cannotdelete: "Can't delete this comment!!"
