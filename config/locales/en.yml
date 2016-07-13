@@ -102,3 +102,9 @@ en:
     deleted: "Comment deleted"
     updated: "Comment updated"
     cannotdelete: "Can't delete this comment!!"
+  rating: 
+    updated: "Your rate was updated. Thank you"
+    success: "Thanks for your rating"
+    fail: "Your rating is fail. Have something error"
+    score: "Product's current score: "
+

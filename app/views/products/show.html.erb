@@ -28,9 +28,15 @@
         <strong><%= t "product.product.product_content" %></strong>:
         <%= @product.content %>
       </p>
+      <div class="product_rating">
+        <%= render "ratings/show" %>
+        <%= render "ratings/rating_form" %>
       </div>
     </div>
   </div>
+  <div class="col-md-4"></div>
+</div>
+<div class="row">
   <div class="product_comment">
     <%= render "comments/comment_form" %>
     <% if @comments.any? %>
@@ -38,7 +44,7 @@
         <% @comments.each do |comment| %>
           <div class="panel-heading">
             <div class="row">
-              <div class="col-xs-12 col-md-8">
+              <div class="col-md-8">
                 <small><%= t "comment.commentby" %></small>
                 <b><%= comment.user.name %></b>
                 <small><%= t "comment.at" %></small>

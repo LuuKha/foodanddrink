@@ -1,0 +1,5 @@
+<%= form_for [@product, @rating] do |f| %>
+  <%= f.select :rating_score, options_for_select([1, 2, 3, 4, 5]), 
+    class: "form-control", include_blank: true %>
+  <%= f.submit :Rate, class: "btn-success" %>
+<% end %>

@@ -37,7 +37,8 @@ Product.create name: "name",
     content: content,
     price: 15000,
     category_id: 1,
-    quantity: 1
+    quantity: 1,
+    classify: 1
   end
 20.times do |n|
   content = Faker::Lorem.sentence(5)

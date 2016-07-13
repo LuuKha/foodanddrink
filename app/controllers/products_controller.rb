@@ -16,9 +16,11 @@ class ProductsController < ApplicationController
     if @product.nil?
       flash[:danger] = t "product.nil"
       redirect_to :back
-    end 
+    end
+
     @comments = @product.comments.paginate page: params[:page]
     @comment ||= @product.comments.new
+    @rating ||= @product.ratings.new
   end
 
   private
