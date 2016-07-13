@@ -1,9 +1,11 @@
 <% provide :title, t("product.products") %>
 <h1><%= t "product.products" %></h1>
+<div class="search">
+  <%= render "shared/form_filter_products", link: products_path %>
+</div>  
 <div class="list_products">
   <%= will_paginate %>
   <div class="products">
     <%= render @products %>
   </div>
-  <%= will_paginate %>
 </div>
