@@ -1,0 +1,13 @@
+<div class="row">
+  <div class = "col-md-6 col-md-offset-3">
+    <%= form_tag link, method: :get do %>
+      <%= select_tag "classify", options_for_select(@classify_selects, 
+        @selected_classify), {include_blank: t("product.all"), class: "form-control"} %>
+      <%= select_tag "category", options_for_select(@category_selects, 
+        @selected_category), {include_blank: t("product.all"), class: "form-control"} %>
+      <%= select_tag "sorted_by", options_for_select(@sorted_by_selects, 
+        @selected_sorted_by), class: "form-control" %>
+      <%= submit_tag t("product.filter"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

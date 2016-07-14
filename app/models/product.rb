@@ -12,4 +12,13 @@ class Product < ActiveRecord::Base
   validates :content, presence: true, length: {minimum: 50}
   validates :price, presence: true, numericality: {greater_than_or_equal_to: 0.5}
   validates :quantity, presence: true, numericality: {only_integer: true}
+
+  class << self
+    def filter classify, category, sorted_by
+      filter = Array.new
+      filter << ["classify = #{classify}"] if classify.present?
+      filter << ["category_id = #{category}"] if category.present?
+      products = where(filter.join " AND ").order sorted_by
+    end
+  end  
 end

@@ -80,6 +80,13 @@ en:
     destroy: "Product has been deleted."
     delete: "Delete."
     confirm: "This action can not undo."
+    all: "All"
+    filter: "Filter"
+    sort_by_Aphabet: "Name (a-z)"
+    sort_by_rating_asc: "Sorted by ascending rating"
+    sort_by_rating_desc: "Sorted by descending rating"
+    sort_by_sprice_asc: "Sorted by ascending price"
+    sort_by_sprice_desc: "Sorted by descending price"
   classify:
     drink: "Drink"
     food: "Food"

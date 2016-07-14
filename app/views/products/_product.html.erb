@@ -1,7 +1,7 @@
 <div class="item col-xs-4 col-lg-4">
   <div class="thumbnail">
     <%= image_tag product.picture_link? ? product.picture_link.url : 
-      "default-product.jpg", class: "group list-group-image" %>
+      "default-product.jpg", class: "group list-group-image mc-img" %>
     <div class="caption">
       <h4 class="group inner list-group-item-heading">
         <%= link_to product.name, product %>
